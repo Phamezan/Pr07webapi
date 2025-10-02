@@ -1,0 +1,6 @@
+@Pr07webapi_HostAddress = http://localhost:5219
+
+GET {{Pr07webapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

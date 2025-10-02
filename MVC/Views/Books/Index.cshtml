@@ -1,0 +1,23 @@
+﻿@model List<Book>
+
+<div class="container mb-3">
+    <form asp-controller="Books" asp-action="Book">
+        <p>
+            <label>Find bog via ID: <input type="text" name="id"/> </label>
+            <input type="submit" value="Find"/>
+        </p>
+    </form>
+</div>
+
+<div>
+    <h1>Bøger</h1>
+    @foreach (var book in Model) {
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">@book.Title</h5>
+                <p class="card-text">@book.Author</p>
+                <a href="#" class="btn btn-primary">@book.Year</a>
+            </div>
+        </div>
+    }
+</div>
